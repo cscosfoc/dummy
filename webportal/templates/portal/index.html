@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for b_fil in b_fil %}
+    <div class="span4">
+    	<h2>{{ b_fil.name }}</h2>
+    	<p>{{ b_fil.description }}</p>
+    	<p><img src ="{{ b_fil.images.all|random }}" class="img-polaroid"></p>
+        <p><a class="btn" href="/hall/{{ b_fil.slug }}/">View details &raquo;</a></p>
+    </div>
+    {% endfor %}
+{% endblock %}
